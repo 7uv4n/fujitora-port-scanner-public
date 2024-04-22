@@ -1,79 +1,128 @@
 <mxfile host="65bd71144e">
     <diagram id="U1imD1LFPHT-nBkokFtK" name="Page-1">
-        <mxGraphModel dx="688" dy="381" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1852" dy="571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="10" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="9">
+                <mxCell id="30" value="FUJITORA PORT SCANNER" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="420" width="630" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="33" target="39" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="2">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="230" y="240" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="2" value="Fujitora" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="170" y="150" width="120" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="3" value="templates" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="490" y="140" width="120" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="4" value="static" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="490" y="90" width="120" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="18" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="17">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="550" y="260"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="29" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="7" target="28">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="650" y="210"/>
-                            <mxPoint x="650" y="150"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="7" value="main.py" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="490" y="190" width="120" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="11" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="4">
+                <mxCell id="76" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1" source="33" target="74" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="3">
+                <mxCell id="33" value="Python Flask" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="460" width="180" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="Front-End" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="500" width="160" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="templates" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="580" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="static" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="530" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="scan_results.db" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="830" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.926;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="40" target="33" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="7">
+                <mxCell id="40" value="scan_results.json" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="690" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="-110" y="575" width="50" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="Back-End" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="640" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="main.py" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="670" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="USER REQUESTS FOR SCANNING&lt;br&gt;(PROVIDES IP ADDRESSES AND PORTS)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-17.48" y="539.88" width="220" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="Read the JSON Payload" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="680" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="blob_storage" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="455" y="860" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="Store data into the Database after scan" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="770" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="Store the JSON Payload" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="810" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="" style="endArrow=classic;html=1;entryX=-0.004;entryY=0.406;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-27.48" y="589.88" as="sourcePoint"/>
+                        <mxPoint x="210.00000000000003" y="589.12" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="80" value="http://127.0.0.1:5000/" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-17.48" y="590" width="220" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="VIEW DASHBOARD" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-17.48" y="625" width="220" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="" style="endArrow=none;html=1;entryX=-0.004;entryY=0.406;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endFill=0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-27.48000000000002" y="654.8800000000001" as="sourcePoint"/>
+                        <mxPoint x="210" y="654.1199999999999" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="84" value="http://127.0.0.1:5000/result" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-17.48" y="655" width="220" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="VIEW PREVIOUS RESULTS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-18.740000000000002" y="705" width="220" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="" style="endArrow=none;html=1;entryX=-0.004;entryY=0.406;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endFill=0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-28.74000000000003" y="734.8800000000001" as="sourcePoint"/>
+                        <mxPoint x="208.74000000000024" y="734.1199999999999" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="87" value="http://127.0.0.1:5000/prev_results" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-18.740000000000002" y="735" width="220" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="helpers" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="660" y="460" width="140" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="helper.py" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="495" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" target="38" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="420" y="510" as="sourcePoint"/>
+                        <mxPoint x="470" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="58" value="Program to Parse IP addresses, Port Strings to required format" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="510" width="230" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.297;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="38" target="33" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="Python Flask" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="320" y="150" width="120" height="40" as="geometry"/>
+                <mxCell id="67" value="Program to Scan IP addresses and&lt;br&gt;return a JSON Payload" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="600" width="210" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="17">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="230" y="310" as="targetPoint"/>
+                <mxCell id="68" value="" style="endArrow=classic;html=1;" parent="1" target="45" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="420" y="630" as="sourcePoint"/>
+                        <mxPoint x="640" y="630" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="17" value="scanner.py" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="170" y="240" width="120" height="40" as="geometry"/>
+                <mxCell id="45" value="scanner.py" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="599.81" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="request scanning" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="395" y="230" width="60" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="25" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="24" target="7">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="580" y="330"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="24" value="scan_results.json" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="170" y="310" width="120" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="28" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
-                    <mxGeometry x="700" y="110" width="60" height="80" as="geometry"/>
+                <mxCell id="70" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="45" target="40" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

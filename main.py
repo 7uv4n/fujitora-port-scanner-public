@@ -5,6 +5,7 @@ from helpers.helper import expand_ranges
 from helpers.scanner import scan_multiple_ips
 import pdfkit
 from flask import render_template, request, Response
+import os
 
 from flask import render_template, request, jsonify, send_file
 from flask import current_app as app
@@ -136,6 +137,26 @@ def download_file(filename):
 @app.route('/delete/<int:id>')
 def delete_entry(id):
     conn = sqlite3.connect('scan_results.db')
+    cursor = conn.cursor()
+
+    cursor.execute('SELECT scan_summary_filename_json, scan_summary_filename_html FROM scans WHERE id = ?', (id,))
+    filenames = cursor.fetchone()
+    
+    if filenames:
+        json_filename = filenames[0]
+        html_filename = filenames[1]
+
+        # Delete the associated JSON file from blob_storage
+        json_filepath = f'blob_storage/{json_filename}'
+        if os.path.exists(json_filepath):
+            os.remove(json_filepath)
+
+        # Delete the associated HTML file from templates
+        html_filepath = f'templates/{html_filename}'
+        if os.path.exists(html_filepath):
+            os.remove(html_filepath)
+
+
     cursor = conn.cursor()
     cursor.execute('DELETE FROM scans WHERE id = ?', (id,))
     conn.commit()
