@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/Bold-BS4-Jumbotron-with-Particles-js-particles-js.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Bold-BS4-Jumbotron-with-Particles-js.css') }}">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-body">
+        <div class="container-fluid">
+            {{navbar | safe}}
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="scan_summary">
+        <div class="p-5 mb-4 bg-light round-3">
+
+            <!-- <div><button class="btn btn-primary" type="button">Download as PDF</button></div> -->
+            {% for item in json_data[name] %}
+            <div class="container-fluid py-5">
+                <h6 class="display-6 fw-bold">Scan Summary for {{item["ip"]}}</h6>
+                <div style="margin-top: 2%;">
+                    <h6 class="display-6 fw-bold" style="font-size: 27.88px;">Scan Parameters</h6>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Parameter Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>IP</td>
+                                    <td>{{item["ip"]}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Number of Open Ports</td>
+                                    <td>{{item["open_ports"]|length}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Number of Closed Ports</td>
+                                    <td>{{item["closed_ports"]|length}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Number of Filtered Ports</td>
+                                    <td>{{item["filtered_ports"]|length}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Start Time</td>
+                                    <td>{{item["start_time"]}}</td>
+                                </tr>
+                                <tr>
+                                    <td>End Time</td>
+                                    <td>{{item["end_time"]}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Elapsed Time</td>
+                                    <td>{{item["end_time"]}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div style="margin-top: 2%;">
+                    <h6 class="display-6 fw-bold" style="font-size: 27.88px;">Ports</h6>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>PORT</th>
+                                    <th>STATUS</th>
+                                    <th>SERVICE</th>
+                                    <th>TIME (s)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for port_ in item['ports'] %}
+                                <tr>
+                                    <td>{{ port_['port_no'] }}</td>
+                                    <td>{{ port_['status'] }}</td>
+                                    <td>{{ port_['service'] }}</td>
+                                    <td>{{ port_['time'] }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>        
+    </div>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/Bold-BS4-Jumbotron-with-Particles-js-particles-js.js') }}"></script>
+</body>
+
+</html>

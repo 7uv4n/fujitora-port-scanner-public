@@ -1,0 +1,80 @@
+{
+    "ScanResults": [
+        {
+            "ip": "127.0.0.1",
+            "open_ports": {
+                "80": "http"
+            },
+            "closed_ports": {},
+            "filtered_ports": {
+                "21": "ftp",
+                "53": "domain",
+                "443": "https",
+                "22": "ssh",
+                "8080": "Unknown",
+                "16000": "Unknown",
+                "345": "Unknown",
+                "5000": "Unknown"
+            },
+            "start_time": "2024:04:21:14:18:26.583529",
+            "end_time": "2024:04:21:14:18:34.645145",
+            "elapsed_time": 8.061616,
+            "ports": [
+                {
+                    "port_no": "21",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.016282
+                },
+                {
+                    "port_no": "53",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.008645
+                },
+                {
+                    "port_no": "80",
+                    "status": "open",
+                    "service": "http",
+                    "time": 0.000998
+                },
+                {
+                    "port_no": "443",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.008239
+                },
+                {
+                    "port_no": "22",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.002318
+                },
+                {
+                    "port_no": "8080",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.003316
+                },
+                {
+                    "port_no": "16000",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.015284
+                },
+                {
+                    "port_no": "345",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.00232
+                },
+                {
+                    "port_no": "5000",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.004214
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "asdf": [
+        {
+            "ip": "127.0.0.1",
+            "open_ports": {
+                "80": "http"
+            },
+            "closed_ports": {},
+            "filtered_ports": {
+                "81": "hosts2-ns",
+                "82": "Unknown",
+                "83": "Unknown",
+                "84": "Unknown",
+                "85": "Unknown"
+            },
+            "start_time": "2024:04:21:17:14:02.259010",
+            "end_time": "2024:04:21:17:14:07.331151",
+            "elapsed_time": 5.072141,
+            "ports": [
+                {
+                    "port_no": "80",
+                    "status": "open",
+                    "service": "http",
+                    "time": 0.005986
+                },
+                {
+                    "port_no": "81",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.014798
+                },
+                {
+                    "port_no": "82",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.011869
+                },
+                {
+                    "port_no": "83",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.014888
+                },
+                {
+                    "port_no": "84",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.016272
+                },
+                {
+                    "port_no": "85",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.008328
+                }
+            ]
+        }
+    ]
+}
