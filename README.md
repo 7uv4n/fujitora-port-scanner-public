@@ -10,7 +10,7 @@ Warning: As this is still in Development, some features might not work or issues
 1. Clone the repository:
    ```git clone https://github.com/7uv4n/fujitora-port-scanner-public```
 2. Navigate to the project Directory
-    cd fujitora-port-scanner
+    ```cd fujitora-port-scanner```
 3. Create a virtual Environment:
     ```python -m venv venv```  
 4. Activate the virtual environment:
