@@ -13,11 +13,11 @@ Warning: As this is still in Development, some features might not work or issues
     cd fujitora-port-scanner
 3. Create a virtual Environment:
     ```python -m venv venv```  
-5. Activate the virtual environment:
-    On Windows, use ```.venv\Scripts\activate```
-6. Install the dependencies:
+4. Activate the virtual environment:
+    On Linux, ```source .venv\Scripts\activate```; On Windows, use ```.venv\Scripts\activate```
+5. Install the dependencies:
     pip install -r requirements.txt
-7. Start the Flask Development Server
+6. Start the Flask Development Server
     ```python main.py```
 
 ## Description
