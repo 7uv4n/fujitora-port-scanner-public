@@ -1,8 +1,8 @@
 # Fujitora Port Scanner
 
-This is an Open-source Flask application that scans a set of IP addresses and their Ports and give a dashboard on results
-Developed by Yuvan and Sabrina
-Named after a 'One Piece' Anime Character, Fujitora 
+This is an Open-source Flask application that scans a set of IP addresses and their Ports and give a dashboard on results\
+Developed by Yuvan and Sabrina\
+Named after a 'One Piece' Anime Character, Fujitora\ 
 
 Warning: As this is still in Development, some features might not work or issues exist with User Experience
 
