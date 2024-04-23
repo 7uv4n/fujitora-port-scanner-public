@@ -1,0 +1,30 @@
+{
+    "scan 1": [
+        {
+            "ip": "127.0.0.1",
+            "open_ports": {},
+            "closed_ports": {},
+            "filtered_ports": {
+                "84": "Unknown",
+                "85": "Unknown"
+            },
+            "start_time": "2024:04:24:00:15:50.726004",
+            "end_time": "2024:04:24:00:15:52.755853",
+            "elapsed_time": 2.029849,
+            "ports": [
+                {
+                    "port_no": "84",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.022696
+                },
+                {
+                    "port_no": "85",
+                    "status": "filtered",
+                    "service": "Unknown",
+                    "time": 1.007153
+                }
+            ]
+        }
+    ]
+}

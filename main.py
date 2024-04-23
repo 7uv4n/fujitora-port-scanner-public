@@ -82,7 +82,13 @@ def result():
         scan_results_json = json.dumps(scan_results)
 
         # Generate file name
-        file_name = f"{name}_{end_time_str.replace(':', '-')}_scan_summary"
+        file_name = f"{name}_{end_time_str}_scan_summary".replace(" ","_")
+
+        # Define a set of invalid characters for file names
+        invalid_chars = '\\/*?:"<>| '
+
+        # Replace invalid characters with underscores ('_')
+        file_name = ''.join('_' if c in invalid_chars else c for c in file_name)
 
         # Define file paths
         file_path_json = f"{file_name}.json"
