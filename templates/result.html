@@ -31,6 +31,9 @@
         <div class="p-5 mb-4 bg-light round-3">
 
             <!-- <div><button class="btn btn-primary" type="button">Download as PDF</button></div> -->
+            <h6 class="display-6 fw-bold" style="font-size: 15px;">Your Scan results will be saved and available in 'Previous Tests'</h6>
+            <h6 class="display-6 fw-bold" style="font-size: 15px;">Press on 'Fujitora Port Scanner' to do a new scan</h6>
+            <h5 class="display-6 fw-bold">Scan Name: {{name}}</h5>
             {% for item in json_data[name] %}
             <div class="container-fluid py-5">
                 <h6 class="display-6 fw-bold">Scan Summary for {{item["ip"]}}</h6>
@@ -51,23 +54,27 @@
                                 </tr>
                                 <tr>
                                     <td>Number of Open Ports</td>
-                                    <td>{{item["open_ports"]|length}}</td>
+                                    <td>{{item["open_ports_count"]}}</td>
                                 </tr>
                                 <tr>
                                     <td>Number of Closed Ports</td>
-                                    <td>{{item["closed_ports"]|length}}</td>
+                                    <td>{{item["closed_ports_count"]}}</td>
                                 </tr>
                                 <tr>
                                     <td>Number of Filtered Ports</td>
-                                    <td>{{item["filtered_ports"]|length}}</td>
+                                    <td>{{item["filtered_ports_count"]}}</td>
                                 </tr>
                                 <tr>
-                                    <td>Start Time</td>
-                                    <td>{{item["start_time"]}}</td>
+                                    <td>Date (YYYY/MM/DD)</td>
+                                    <td>{{item["start_time"][:10] | replace(':', '/')}}</td>
                                 </tr>
                                 <tr>
-                                    <td>End Time</td>
-                                    <td>{{item["end_time"]}}</td>
+                                    <td>Start Time (HH:MM:SS.SS)</td>
+                                    <td>{{item["start_time"][11:22]}}</td>
+                                </tr>
+                                <tr>
+                                    <td>End Time (HH:MM:SS.SS)</td>
+                                    <td>{{item["end_time"][11:22]}}</td>
                                 </tr>
                                 <tr>
                                     <td>Elapsed Time (s)</td>

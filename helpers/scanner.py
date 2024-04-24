@@ -40,8 +40,11 @@ def scan_ports(ip, ports, timeout=1):
     return {
         "ip": ip,
         "open_ports": open_ports,
+        "open_ports_count": len(open_ports),
         "closed_ports": closed_ports,
+        "closed_ports_count": len(closed_ports),
         "filtered_ports": filtered_ports,
+        "filtered_ports_count": len(filtered_ports),
         "start_time": start_time.strftime("%Y:%m:%d:%H:%M:%S.%f"),
         "end_time": end_time.strftime("%Y:%m:%d:%H:%M:%S.%f"),
         "elapsed_time": (end_time - start_time).total_seconds(),
