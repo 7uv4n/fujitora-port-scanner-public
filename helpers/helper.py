@@ -1,14 +1,18 @@
+
+#  Function to expand a range of port numbers given in a string
 def expand_ip_range(ip_range_str):
     import ipaddress
-
+    #   Function to expand a range of IP addresses given in a string
     def expand_single_ip(ip):
         try:
             ipaddress.ip_address(ip)
             return [ip]
-        except ValueError:
+        except ValueError: # Not a single IP address
             pass
         
         parts = ip.split('.')
+        
+        # Check if the last part of the IP address is a range
         if '-' in parts[-1]:
             base_ip = '.'.join(parts[:-1])
             start, end = map(int, parts[-1].split('-'))
@@ -21,12 +25,16 @@ def expand_ip_range(ip_range_str):
 
     # Expand each part of the IP range string
     expanded_ips = []
+
+    # Expand each part of the IP range string
     for ip_range in ip_ranges:
         expanded_ips.extend(expand_single_ip(ip_range))
 
     return expanded_ips
 
+# Function to expand a range of port numbers given in a string
 def expand_ranges(input_str):
+
     def expand_range(range_str):
         parts = range_str.split('-')
         if len(parts) == 1:

@@ -36,20 +36,18 @@ conn.commit()
 
 app = Flask(__name__)
 
+# Define the navigation bar
 navbar = """
     <a class="navbar-brand" href="/">Fujitora Port Scanner</a>
     <a class="navbar-brand" href="/previous">Previous Tests</a>
 """
-#
-#
-#
-#
-#
+
 # This route will be used to display the home page
 @app.route('/')
 def index():
     return render_template('index.html' , navbar = navbar)
 
+# This route will be used to display the result of the scan
 @app.route('/result', methods=['POST'])
 def result():
     conn = sqlite3.connect('scan_results.db')
@@ -107,13 +105,15 @@ def result():
         with open(f"blob_storage/{file_name}.json", "w") as json_file:
             json.dump(scan_results, json_file, indent=4)
 
+        # Generate HTML template
         RENDER = render_template('result.html', json_data=scan_results, navbar=navbar, name=name)
 
+        # Save the HTML template to a file
         with open(f"templates/{file_name}.html", 'w') as file:
             file.write(RENDER)
 
         return RENDER
-    else:
+    else: 
         return "Scan results not found for the specified name."
 
 
@@ -145,9 +145,11 @@ def delete_entry(id):
     conn = sqlite3.connect('scan_results.db')
     cursor = conn.cursor()
 
+    # Get the filenames of the JSON and HTML files associated with the scan entry
     cursor.execute('SELECT scan_summary_filename_json, scan_summary_filename_html FROM scans WHERE id = ?', (id,))
     filenames = cursor.fetchone()
     
+    # Check if filenames exist and delete the associated files
     if filenames:
         json_filename = filenames[0]
         html_filename = filenames[1]
@@ -162,17 +164,20 @@ def delete_entry(id):
         if os.path.exists(html_filepath):
             os.remove(html_filepath)
 
-
+    # Delete the entry from the database
     cursor = conn.cursor()
     cursor.execute('DELETE FROM scans WHERE id = ?', (id,))
     conn.commit()
     return redirect(url_for('prev_results'))
 
-
+# This route will be used to display the scan summary
 @app.route('/prev_dashboard/<string:webs>')
 def prev_dashboard(webs):
     print(webs)
     return render_template(webs)
 
+# Main Program
+# set "debug=FALSE" if in Production
+# To set local IP addresss to host across Wi-fi Network, use "host=<IP address>'
 if __name__ == '__main__':
     app.run(debug=True)
