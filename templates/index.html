@@ -51,6 +51,51 @@
     </div>
     <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/Bold-BS4-Jumbotron-with-Particles-js-particles-js.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to validate form inputs before submission
+            function validateForm() {
+                // Get form inputs
+                var nameInput = document.querySelector('input[name="Name"]');
+                var ipInput = document.querySelector('input[name="ip_address"]');
+                var portInput = document.querySelector('input[name="portnumbers"]');
+    
+                // Regular expressions to match the intended formats
+                var ipRegex = /^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}([,-]\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})*)$/;
+                var portRegex = /^(\d+-\d+|[0-9,]+)$/;
+    
+                // Validate Name (should not be empty)
+                if (nameInput.value.trim() === '') {
+                    alert('Please enter a valid Name.');
+                    return false;
+                }
+    
+                // Validate IP Address
+                if (!ipRegex.test(ipInput.value)) {
+                    alert('Please enter a valid IP address(es) in the correct format.');
+                    return false;
+                }
+    
+                // Validate Port Numbers
+                if (!portRegex.test(portInput.value)) {
+                    alert('Please enter valid port number(s) in the correct format.');
+                    return false;
+                }
+    
+                // Form inputs are valid, proceed with submission
+                return true;
+            }
+    
+            // Handle form submission
+            var form = document.querySelector('form');
+            form.addEventListener('submit', function(event) {
+                if (!validateForm()) {
+                    event.preventDefault(); // Prevent form submission if validation fails
+                }
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
