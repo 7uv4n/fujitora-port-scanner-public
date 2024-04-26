@@ -15,7 +15,7 @@ Warning: As this is still in Development, some features might not work or issues
 3. Create a virtual Environment:
     ```python -m venv venv```  
 4. Activate the virtual environment:
-    On Linux, ```source venv/bin/activate```; On Windows, use ```.venv/Scripts/activate```
+    On Linux, ```source venv/bin/activate```; On Windows, use ```venv/Scripts/activate```
 5. Install the dependencies:
     ```pip install -r requirements.txt```
 6. Start the Flask Development Server
